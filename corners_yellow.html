@@ -8,14 +8,14 @@
 
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
-    }
+          font-family: 'Segoe UI', sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f9f9f9;
+          color: #333;
+      }
 
-    h1 {
+     h1 {
       text-align: center;
       font-size: 48px;
       margin: 40px 20px;
@@ -24,15 +24,16 @@
       padding: 20px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
       border-radius: 16px;
+      
     }
 
-    .container {
+    .container{
       max-width: 960px;
       margin: auto;
       padding: 20px;
     }
 
-    p {
+    p{
       text-align: center;
       font-size: 1.25em;
       line-height: 1.6;
@@ -40,36 +41,43 @@
       font-weight: 500;
     }
 
-    #img-hold {
+
+    #img-hold{
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 20px 0 60px 0;
+      margin: 20px 0px;
+      margin-top: 60px;
     }
 
-    #img-hold img {
-      width: 15%;
-      max-width: 300px;
+    #corners{
+      width: 200px;
       height: auto;
     }
 
     #vd-hold {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 40px;
-      flex-wrap: wrap;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap; /* allow stacking on smaller screens */
+}
 
-    #vd {
-      width: 100%;
-      max-width: 600px;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-    }
+#vd {
+  width: 100%;
+  max-width: 300px; /* stays small on large screens */
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
 
-    #hr {
+@media (max-width: 600px) {
+  #vd {
+    max-width: 100%; /* allow full width on mobile */
+  }
+}
+
+    #hr{
       margin-bottom: 40px;
       padding-bottom: 40px;
       border-bottom: 2px solid #ccc;
@@ -102,43 +110,6 @@
       }
       50% {
         transform: translateY(-5px);
-      }
-    }
-
-    /* Responsive Styles */
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 36px;
-        margin: 30px 10px;
-        padding: 15px;
-      }
-
-      p {
-        font-size: 1.1em;
-        margin: 15px;
-      }
-
-      .next-step-button {
-        font-size: 1.1rem;
-        padding: 12px 24px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 28px;
-      }
-
-      p {
-        font-size: 1em;
-      }
-
-      #img-hold img {
-        max-width: 50%;
-      }
-
-      #vd {
-        max-width: 100%;
       }
     }
   </style>
