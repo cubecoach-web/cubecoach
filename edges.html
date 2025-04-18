@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cube Coach</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <style>
+        body {
+          font-family: 'Segoe UI', sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f9f9f9;
+          color: #333;
+      }
+
+     h1 {
+      text-align: center;
+      font-size: 48px;
+      margin: 40px 20px;
+      font-weight: 800;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 16px;
+      
+    }
+
+    .container{
+      max-width: 960px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    p{
+      text-align: center;
+      font-size: 1.25em;
+      line-height: 1.6;
+      margin: 20px;
+      font-weight: 500;
+    }
+
+
+    #img-hold{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px 0px;
+    }
+
+    #corners{
+      width: 200px;
+      height: auto;
+    }
+
+    #vd-hold {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap; /* allow stacking on smaller screens */
+}
+
+#vd {
+  width: 100%;
+  max-width: 300px; /* stays small on large screens */
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+  #vd {
+    max-width: 100%; /* allow full width on mobile */
+  }
+}
+
+    #hr{
+      margin-bottom: 40px;
+      padding-bottom: 40px;
+      border-bottom: 2px solid #ccc;
+    }
+
+    .next-step-button {
+      display: block;
+      margin: 40px auto;
+      padding: 15px 30px;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #fff;
+      background: linear-gradient(135deg, #4CAF50, #81C784);
+      border: none;
+      border-radius: 40px;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: float 2s ease-in-out infinite;
+    }
+
+    .next-step-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-5px);
+      }
+    }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lesson 3: 2nd Layer</h1>
+        <p>You will realize that to solve the 2nd layer you will only need to place <br> the edges in the right place.</p>
+        <div id="img-hold">
+            <img id="img" src="edges.png" alt="img">
+        </div>
+        <p>You will need to Know these algorithms: <br> <strong><big> (i): R U R' U'</big></strong> <br> <strong><big>(ii): L' U' L U</big></strong></p>
+        <div id="vd-hold">
+            <video id="vd" width="300" height="auto" controls muted loop>
+                <source src="rur'u'.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video id="vd" width="300" height="auto" controls muted loop>
+                <source src="l'u'lu.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <p id="hr">Practice these algorithms until you are fluent.</p>
+        <p>To solve the edges, first find the edge that does not have the color yellow and then align the edge color eith the center of its colors and determin where the other color wil go. Whether it will go to <strong>right or left.</strong></p>
+        <p>If the color need to go on the right side move the top layer clock-wise (U) and do the righty algoritm then turn the cube to the right side and then do the lefty algorithm.</p>
+        <p>And If the color is on the left side turn the top layer counter-clock-wise and do the lefty algorithm then turn the cube left side and do the righty algorithm.</p>
+        <div id="vd-hold">
+            <video id="vd" width="600" height="auto" controls muted loop>
+                <source src="egdes.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <p id="hr"><strong><big>Congrats! You have solved the 2nd Layer now there is only one layer left.</big></strong></p>
+        <button onclick="window.location.href='last.html'" class="next-step-button">Continue to the Last Layer</button>
+    </div>
+</body>
+</html>

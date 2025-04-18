@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cube Coach</title>
+  <link rel="icon" type="image/png" href="/favicon.png">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 48px;
+      margin: 40px 20px;
+      font-weight: 800;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 16px;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    p {
+      text-align: center;
+      font-size: 1.25em;
+      line-height: 1.6;
+      margin: 20px;
+      font-weight: 500;
+    }
+
+    #img-hold {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px 0 60px 0;
+    }
+
+    #img-hold img {
+      width: 15%;
+      max-width: 300px;
+      height: auto;
+    }
+
+    #vd-hold {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    #vd {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    #hr {
+      margin-bottom: 40px;
+      padding-bottom: 40px;
+      border-bottom: 2px solid #ccc;
+    }
+
+    .next-step-button {
+      display: block;
+      margin: 40px auto;
+      padding: 15px 30px;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #fff;
+      background: linear-gradient(135deg, #4CAF50, #81C784);
+      border: none;
+      border-radius: 40px;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: float 2s ease-in-out infinite;
+    }
+
+    .next-step-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-5px);
+      }
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 36px;
+        margin: 30px 10px;
+        padding: 15px;
+      }
+
+      p {
+        font-size: 1.1em;
+        margin: 15px;
+      }
+
+      .next-step-button {
+        font-size: 1.1rem;
+        padding: 12px 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 28px;
+      }
+
+      p {
+        font-size: 1em;
+      }
+
+      #img-hold img {
+        max-width: 50%;
+      }
+
+      #vd {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Solve the corners</h1>
+    <p>You will need to align all the corners in the right place even if the yellow color on the corner is not up:</p>
+    <div id="img-hold">
+      <img src="corner_yellow.png" alt="Corner Yellow">
+    </div>
+    <p id="hr">
+      To place the corners in the correct spot practice this algorithm until you are fluent: <br>
+      <strong><big>R U'L' U R' U' L</big></strong>
+    </p>
+    <p>
+      Now to solve the corners find one corner that is already aligned and rotate your cube so the corner that is already in the right place is in left and repeat the algorithm a few times. This will place all the corners in the right place.
+    </p>
+    <div id="vd-hold">
+      <video id="vd" controls muted loop>
+        <source src="corners_alg.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <p id="hr">Now there is only one step then the Rubik's Cube will be solved!</p>
+    <button class="next-step-button" onclick="window.location.href='solve.html'">Solve it!</button>
+  </div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cube Coach</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <style>
+        body {
+          font-family: 'Segoe UI', sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f9f9f9;
+          color: #333;
+      }
+
+     h1 {
+      text-align: center;
+      font-size: 48px;
+      margin: 40px 20px;
+      font-weight: 800;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 16px;
+      
+    }
+
+    .container{
+      max-width: 960px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    p{
+      text-align: center;
+      font-size: 1.25em;
+      line-height: 1.6;
+      margin: 20px;
+      font-weight: 500;
+    }
+
+
+    #img-hold{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px 0px;
+      margin-top: 60px;
+    }
+
+    #corners{
+      width: 200px;
+      height: auto;
+    }
+
+    #vd-hold {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap; /* allow stacking on smaller screens */
+}
+
+#vd {
+  width: 100%;
+  max-width: 300px; /* stays small on large screens */
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+  #vd {
+    max-width: 100%; /* allow full width on mobile */
+  }
+}
+
+
+    #hr{
+      margin-bottom: 40px;
+      padding-bottom: 40px;
+      border-bottom: 2px solid #ccc;
+    }
+
+    .next-step-button {
+      display: block;
+      margin: 40px auto;
+      padding: 15px 30px;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #fff;
+      background: linear-gradient(135deg, #4CAF50, #81C784);
+      border: none;
+      border-radius: 40px;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: float 2s ease-in-out infinite;
+    }
+
+    .next-step-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-5px);
+      }
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Solve the Cube!</h1>
+        <p>This is the final step when all corners are aligned, practice this algorithm: <br> <strong><big>U R' U' R</big>
+        <P>Warning: This algorithm is very likely to be messed up so don't be frustrated.</P>
+        </strong></p>
+        <p>Place the yellow side on front with the first yellow corner do this algorithm until the yellow is on front then rotate the cube so that the next corner piece comes and repeat this algorithm again until solve and repeat this for all unsolved corner pieces. <strong><big>Please Watch the Video Before: </big></strong></p>
+        <div id="vd-hold">
+            <video id="vd" width="600" height="auto" controls muted loop>
+              <source src="last_alg.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+        </div>
+        <p><big>With this the Rubik's cube will be solved. Congratulations for solving your first ever Rubik's Cube!</big></p>
+        <p id="hr">It's really a big moment, show them all that you know how to solve the Rubik's cube and teach them also!</p>
+        <p><strong><big>Goodbye! :)</big></strong></p>
+    </div>
+</body>
+</html>
