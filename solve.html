@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cube Coach</title>
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png">
 
     <style>
         body {
@@ -113,24 +114,36 @@
         transform: translateY(-5px);
       }
     }
+
+    #letter{
+      border: 2px solid black;
+      border-radius: 20px;
+      padding: 30px;
+
+    }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Solve the Cube!</h1>
-        <p>This is the final step when all corners are aligned, practice this algorithm: <br> <strong><big>U R' U' R</big>
-        <P>Warning: This algorithm is very likely to be messed up so don't be frustrated.</P>
-        </strong></p>
-        <p>Place the yellow side on front with the first yellow corner do this algorithm until the yellow is on front then rotate the cube so that the next corner piece comes and repeat this algorithm again until solve and repeat this for all unsolved corner pieces. <strong><big>Please Watch the Video Before: </big></strong></p>
+        <p>This is the final step and only requires this algorithm: <br> <strong><big>U R' U' R</big></strong></p>
+        <P style="border: 2px solid black; padding: 20px; background-color: #ccc; border-radius: 20px;"><strong style="color: red;">Warning:</strong> This algorithm is likely to be messed up so don't be frustrated.</P>
+        
+        <p style="line-height: 50px;">Place the yellow side on front with the first yellow corner on the top right <br> then do this algorithm until the yellow color is on front of the corner then rotate the <br> yellow side of the cube so that the next corner piece comes on the position <br>the previous corner piece was and repeat this algorithm again until all corner pieces are solved. <br><br><strong><big>Please Watch the Video Before: </big></strong></p>
         <div id="vd-hold">
             <video id="vd" width="600" height="auto" controls muted loop>
               <source src="last_alg.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
         </div>
-        <p><big>With this the Rubik's cube will be solved. Congratulations for solving your first ever Rubik's Cube!</big></p>
-        <p id="hr">It's really a big moment, show them all that you know how to solve the Rubik's cube and teach them also!</p>
-        <p><strong><big>Goodbye! :)</big></strong></p>
-    </div>
+        <p id="hr"></p>
+        <div>
+          <strong style="font-size: x-large;">Dear solver,</strong> <br>
+          <p style="margin-left: 30px;">You just solved the Rubik's cube for the first ever time, something that looked like a colorful mystery.
+            All the hard work led you to this moment, <strong>You did not just solve a Rubik's cube, you solved a mystery!</strong>
+            This is a moment worth of celebration, show you parents, teachers, clasmates that you can solve a Rubik's cube that is mystery to more than <strong>95%</strong> of the world!</p>
+        </div id="letter">
+            <strong style="font-family: 'Great Vibes', cursive; font-size: x-large;">AAYAN</strong>
+        </div>
 </body>
 </html>
